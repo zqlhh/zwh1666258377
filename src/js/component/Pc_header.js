@@ -22,7 +22,7 @@ export default class Pc_header extends Component{
             border:"1px solid black"
         }
         return(
-            <div>
+            <header>
                 <Row style={{marginTop:"5px"}}>
                     <Col span={2}></Col>
                     <Col span={4}>
@@ -63,7 +63,7 @@ export default class Pc_header extends Component{
                     </Col>
                     <Col span={2}></Col>
                 </Row>
-            </div>
+            </header>
         )
     }
 }

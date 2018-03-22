@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import Pc_header from './js/component/Pc_header';
+import MediaQuery from 'react-responsive';
 import Pc_index from './js/component/Pc_index';
-
+import Mobile_index from './js/component/Mobile_index';
+ 
 class App extends Component {
   render() {
     return (
       <div>
-        <Pc_index/>
+        <MediaQuery query='(min-device-width: 1224px)'>
+          <Pc_index/>
+        </MediaQuery>
+
+        <MediaQuery query='(max-device-width: 1224px)'>
+          <Mobile_index/>
+        </MediaQuery>
       </div>
     );
   }

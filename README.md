@@ -32,4 +32,11 @@
 ### 2018年3月22日
 - 昨天无意中了解到,我一直纠结的webpack问题,原来可以很轻松的解决.其实在`create-react-app`这个React项目自动构建的脚手架中就已经内置了webpack,并且已经配置好了,只要通过 `npm run build` 即可将打包后的内容放置项目目录中,随后可通过提示的命令,在本地测试打包后的项目
 - 小tip,项目介绍页可放置github pages中,免费的服务器,在这我理解为这是QQ空间一样。 哈哈
-- 考虑到移动端,则选择用了 react-responsive
+- 考虑到移动端,要使用媒体查询,则选择用了 react-responsive,通过命令`cnpm install react-responsive --save` 安装即可。
+  - 例 ↓
+    ```
+    <MediaQuery query='(min-device-width: 1224px)'>
+      <Pc_index/>
+    </MediaQuery>
+    ```
+- 今天完成了Pc、Mobile的header、footer部分,来活了,忙项目咯。 ***14点55分***
