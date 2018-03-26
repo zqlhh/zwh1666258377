@@ -8,6 +8,8 @@ export default class Pc_index extends Component{
                 <Pc_header>
 
                 </Pc_header>
+
+                
                 <Pc_footer>
 
                 </Pc_footer>

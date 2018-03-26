@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 
 export default class Mobile_header extends Component{
     render(){
+        
+
         return(
             <div id="Mobile_header">
                 <header>
