@@ -31,15 +31,15 @@ export default class Pc_newsContainer extends Component{
             </div>
 						<Tabs className="tabs_news">
 							<TabPane tab="头条新闻" key="1">
-								<Pc_newsBlock count={22} type="top" width="100%" bordered="false" />
+								<Pc_newsBlock count={11} type="top" width="100%" bordered="false" />
 							</TabPane>
 							<TabPane tab="国际" key="2">
-								<Pc_newsBlock count={22} type="guoji" width="100%" bordered="false" />
+								<Pc_newsBlock count={11} type="guoji" width="100%" bordered="false" />
 							</TabPane>
 						</Tabs>
 						<div>
-							<Pc_newsImgBlock count={8} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="132px"/>
-							<Pc_newsImgBlock count={16} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="132px"/>
+							<Pc_newsImgBlock count={6} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="132px"/>
+							<Pc_newsImgBlock count={10} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="132px"/>
 						</div>
           </Col>
 					<Col span={2}></Col>
