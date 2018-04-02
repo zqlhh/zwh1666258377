@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import { Card} from 'antd';
 import {Link, BrowserRouter} from 'react-router-dom';
 
-
-
 // 新闻块,内容是由Li标签包围的新闻标题,被引入newsContainer的新闻Tabs中
-
 
 export default class Pc_newsBlock extends Component{
     constructor() {
@@ -26,17 +23,16 @@ export default class Pc_newsBlock extends Component{
 	};
 
     render(){
-		const {news} = this.state;
+        const {news} = this.state;
 		const liStyle={
-			width:"360px",
 			whiteSpace: "nowrap",
 			overflow: "hidden",
 			textOverflow: "ellipsis",
-			marginBottom:"4px"
+            marginBottom:"4px"
 		}
 		const newsList = news.length
 			? news.map((newsItem, index) => (
-				<li key={index} className="newsBlock_li" style={liStyle}>
+				<li key={index} className="Mobile_newsBlock_li" style={liStyle}>
                     <BrowserRouter>
                         <Link to={`details/${newsItem.uniquekey}`} target="_blank">
                             {newsItem.title}
@@ -46,9 +42,9 @@ export default class Pc_newsBlock extends Component{
 			))
 			: '没有加载到任何新闻';
 		return (
-			<div className="topNewsList">
+			<div className="Mobile_topNewsList">
 				<Card>
-					<ul className="newsBlock_ul">
+					<ul className="Mobile_newsBlock_ul">
 						{newsList}
 					</ul>
 				</Card>

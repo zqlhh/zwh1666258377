@@ -30,4 +30,16 @@ html{
     margin-top: 0.3rem;
     color: #1890ff;
 }
+.Mobile_newsBlock_li{
+    text-decoration-line: underline;
+    margin-bottom: 5px;
+}
 
+.Mobile_newsBlock_ul{
+padding: 0;
+margin: 0;
+}
+
+.Mobile_NewsBlockTabs{
+    height: 550px;
+}

@@ -22,8 +22,11 @@ class Pc_header extends Component{
 
 	componentWillMount(){
 		if (localStorage.userid!='') {
-			this.setState({hasLogined:true});
-			this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid});
+            this.setState({hasLogined:true});
+            //组建加载前读取本地缓存 setState
+            this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid});
+            console.log(localStorage.userNickName)
+            console.log(localStorage.userid)
 		}
 	};
 
@@ -49,7 +52,7 @@ class Pc_header extends Component{
 			method: 'GET'
 		};
 		var formData = this.props.form.getFieldsValue();
-		console.log(formData);
+		console.log(formData);//返回表单输入内容
 		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
 		+ "&username="+formData.userName+"&password="+formData.password
 		+"&r_userName=" + formData.r_userName + "&r_password="
@@ -57,9 +60,10 @@ class Pc_header extends Component{
 		+ formData.r_confirmPassword, myFetchOptions)
 		.then(response => response.json())
 		.then(json => {
-			this.setState({userNickName: json.NickUserName, userid: json.UserId});
+            console.log(json)//返回返回的json内容
+			this.setState({userNickName: json.UserId, userid: json.UserId});
             localStorage.userid= json.UserId;
-			localStorage.userNickName = json.NickUserName;
+			localStorage.userNickName = json.UserId;
 		});
 		if (this.state.action=="login") {
 			this.setState({hasLogined:true});
@@ -132,9 +136,9 @@ class Pc_header extends Component{
                                 <Menu.Item key="keji">
                                     <Icon type="appstore"/>科技
                                 </Menu.Item>
-                                <Menu.Item key="shishang">
+                                {/* <Menu.Item key="shishang">
                                     <Icon type="appstore"/>时尚
-                                </Menu.Item>
+                                </Menu.Item> */}
                                 {userShow}
                             </Menu>
 
