@@ -41,6 +41,8 @@ a{
     list-style-type: none;
     text-decoration-line: none;
 }
+.topNewsList{
+}
 
     .newsBlock_ul{
     padding: 0;
@@ -69,6 +71,6 @@ a{
       font-size: 16px;
   }
   .custom-card>p{
-      color: red;
+      color: rgba(128, 128, 128);
       font-size: 12px;
   }

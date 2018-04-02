@@ -32,7 +32,7 @@ export default class Pc_newsBlock extends Component{
 			whiteSpace: "nowrap",
 			overflow: "hidden",
 			textOverflow: "ellipsis",
-			marginBottom:"4px"
+			marginBottom:"10px"
 		}
 		const newsList = news.length
 			? news.map((newsItem, index) => (
@@ -47,7 +47,7 @@ export default class Pc_newsBlock extends Component{
 			: '没有加载到任何新闻';
 		return (
 			<div className="topNewsList">
-				<Card>
+				<Card style={{height:"650px"}}>
 					<ul className="newsBlock_ul">
 						{newsList}
 					</ul>
