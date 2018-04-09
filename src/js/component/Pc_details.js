@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Row,Col} from 'antd';
+import Pc_header from './Pc_header';
+import Pc_footer from './Pc_footer';
 
 export default class Pc_details extends Component{    
 	constructor() {
@@ -25,6 +27,7 @@ export default class Pc_details extends Component{
 	render() {
 		return (
 			<div>
+                <Pc_header/>
 				<Row>
 					<Col span={2}></Col>
 					<Col span={14} className="container">
@@ -33,6 +36,7 @@ export default class Pc_details extends Component{
 					<Col span={6}></Col>
 					<Col span={2}></Col>
 				</Row>
+                <Pc_footer/>
 			</div>
 		);
 	};
