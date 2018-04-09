@@ -25,8 +25,6 @@ class Pc_header extends Component{
             this.setState({hasLogined:true});
             //组建加载前读取本地缓存 setState
             this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid});
-            console.log(localStorage.userNickName)
-            console.log(localStorage.userid)
 		}
 	};
 

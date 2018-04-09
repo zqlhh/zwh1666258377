@@ -52,9 +52,9 @@ export default class Pc_newsContainer extends Component{
 
 
 						<div style={{marginTop:"15px"}}>
-							<Pc_newsImgBlock count={6} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="162px"/>
+							<Pc_newsImgBlock count={6} type="guonei" width="100%" cartTitle="国内新闻" imageWidth="155px"/>
               <div style={{marginTop:"15px"}}></div>
-							<Pc_newsImgBlock count={10} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="162px"/>
+							<Pc_newsImgBlock count={10} type="yule" width="100%" cartTitle="娱乐新闻" imageWidth="155px"/>
 						</div>
           </Col>
 					<Col span={2}></Col>
