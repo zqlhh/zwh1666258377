@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Row,Col,BackTop} from 'antd';
-import Pc_header from './Pc_header';
-import Pc_footer from './Pc_footer';
+import Mobile_header from './Mobile_header';
+import Mobile_footer from './Mobile_footer';
 import Pc_newsImgBlock from './Pc_newsImgBlock';
 
-export default class Pc_details extends Component{    
+export default class Mobile_newsDetails extends Component{    
 	constructor() {
 		super();
 		this.state = {
@@ -27,22 +27,17 @@ export default class Pc_details extends Component{
 	};
 	render() {
 		return (
-			<div>
-                <Pc_header/>
+			<div id="mobileDetailsContainer">
+                <Mobile_header/>
+                <div class="ucmobileList">
 				<Row>
-					<Col span={2}></Col>
-					<Col span={14} className="container">
+					<Col span={24} className="container">
 						<div class="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
-						<hr/>
-						<CommonComments uniquekey={this.props.match.params.uniquekey}/>
 					</Col>
-					<Col span={6}>
-                        <Pc_newsImgBlock count={40} type="top" width="100%" cardTitle="相关新闻" imageWidth="150px"/>
-                    </Col>
-					<Col span={2}></Col>
 				</Row>
-                <Pc_footer/>
+                <Mobile_footer/>
                 <BackTop/>
+                </div>
 			</div>
 		);
 	};
