@@ -50,7 +50,8 @@ class Pc_header extends Component{
 			method: 'GET'
 		};
 		var formData = this.props.form.getFieldsValue();
-		console.log(formData);//返回表单输入内容
+        console.log(formData);//返回表单输入内容
+        
 		fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
 		+ "&username="+formData.userName+"&password="+formData.password
 		+"&r_userName=" + formData.r_userName + "&r_password="
@@ -87,9 +88,9 @@ class Pc_header extends Component{
 			? <Menu.Item key="logout" class="register">
 					<Button type="primary" htmlType="button">{this.state.userNickName}</Button>
 					&nbsp;&nbsp;
-					{/* <Link target="_blank"> */}
-						<Button type="dashed" htmlType="button"><a href="#" target="_blank">个人中心</a></Button>
-					{/* </Link> */}
+					<Link target="_blank" to={'/Pc_usercenter'}>
+						<Button type="dashed" htmlType="button">个人中心</Button>
+					</Link>
 					&nbsp;&nbsp;
 					<Button type="ghost" htmlType="button" onClick={this.logout.bind(this)}>退出</Button>
 				</Menu.Item>

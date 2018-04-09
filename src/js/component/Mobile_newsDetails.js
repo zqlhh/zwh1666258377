@@ -3,6 +3,7 @@ import {Row,Col,BackTop} from 'antd';
 import Mobile_header from './Mobile_header';
 import Mobile_footer from './Mobile_footer';
 import Pc_newsImgBlock from './Pc_newsImgBlock';
+import CommonComments from './common_comments';
 
 export default class Mobile_newsDetails extends Component{    
 	constructor() {
@@ -33,6 +34,8 @@ export default class Mobile_newsDetails extends Component{
 				<Row>
 					<Col span={24} className="container">
 						<div class="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
+						<hr/>
+						<CommonComments uniquekey={this.props.match.params.uniquekey}/>
 					</Col>
 				</Row>
                 <Mobile_footer/>

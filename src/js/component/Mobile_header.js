@@ -73,11 +73,10 @@ class Mobile_header extends Component {
 	render() {
 		let { getFieldDecorator } = this.props.form;
 		const userShow = this.state.hasLogined ?
-			// <Link>
-			<Icon type="inbox" />
-			// </Link> 
-			:
-			<Icon type="setting" onClick={this.login.bind(this)} />
+			<Link to={`/Mobile_usercenter`}>
+				<Icon type="inbox" />
+			</Link> 
+			: <Icon type="setting" onClick={this.login.bind(this)} />
 
 		return (
 			<div id="Mobile_header">
