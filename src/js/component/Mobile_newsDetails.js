@@ -3,7 +3,7 @@ import {Row,Col,BackTop} from 'antd';
 import Mobile_header from './Mobile_header';
 import Mobile_footer from './Mobile_footer';
 import Pc_newsImgBlock from './Pc_newsImgBlock';
-import CommonComments from './common_comments';
+import CommonComments from './Common_comments';
 
 export default class Mobile_newsDetails extends Component{    
 	constructor() {

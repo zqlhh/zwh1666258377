@@ -3,7 +3,7 @@ import {Row,Col,BackTop} from 'antd';
 import Pc_header from './Pc_header';
 import Pc_footer from './Pc_footer';
 import Pc_newsImgBlock from './Pc_newsImgBlock';
-import CommonComments from './common_comments';
+import CommonComments from './Common_comments';
 
 export default class Pc_details extends Component{    
 	constructor() {
